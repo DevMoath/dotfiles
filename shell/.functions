@@ -121,3 +121,11 @@ brew_switch() {
 composer_1() {
     docker run --rm --interactive --tty --volume "$PWD":/app composer:1 "$@"
 }
+
+routes() {
+    if [ $# -eq 0 ]; then
+        php artisan route:list
+    else
+        php artisan route:list | grep "$1"
+    fi
+}
