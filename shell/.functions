@@ -9,8 +9,9 @@ setup_permissions() {
         USER="$3"
 
         sudo chown -R "$USER":"$WEB_SERVER_USER" "$PATH"
-        sudo usermod -a -G "$WEB_SERVER_USER" "$USER"
-        sudo chmod -R 775 "$PATH"
+        sudo usermod -aG "$WEB_SERVER_USER" "$USER"
+        sudo usermod -aG "$USER" "$WEB_SERVER_USER"
+        sudo chmod -R ug+rwx "$PATH"
     fi
 }
 
