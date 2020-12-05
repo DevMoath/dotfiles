@@ -1,4 +1,5 @@
 # global aliases
+alias sudo="sudo "
 alias ali="vi $HOME/.aliases"
 alias cl="clear"
 alias update-all="sh $HOME/.scripts/update.sh"
