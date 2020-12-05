@@ -1,0 +1,103 @@
+# global aliases
+alias ali="vi $HOME/.aliases"
+alias cl="clear"
+alias update-all="sh $HOME/.scripts/update.sh"
+alias sshconfig="vi $HOME/.ssh/config"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias reloadcli="source $HOME/.zshrc"
+alias o="open ."
+alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Dashlane.app Docker.app PhpStorm.app"
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Restart touch bar
+alias touchbar="killall ControlStrip"
+
+# IP addresses
+alias ip="curl https://diagnostic.opendns.com/myip ; echo"
+
+# ls aliases
+alias ll='ls -halF'
+
+# git aliases
+alias gc="git clone"
+alias gr="git remote get-url origin"
+alias gs="git status"
+alias gpu="git pull"
+alias gpua="git pull --all"
+alias ga="git add ."
+alias gp="git push"
+alias gch="git checkout"
+alias gm="git commit -m"
+alias gco="git config user.name Moath && git config user.email moath.alhajrii@gmail.com"
+alias nah="git reset --hard"
+
+# gists aliases
+alias scan-file="wget https://gist.githubusercontent.com/DevMoath/4df498915090b110d3a42a82d845a788/raw/c73488328800b116d21dfef88a97fedaaf28e55b/scanner_config.php"
+alias phpstorm-file="wget https://gist.githubusercontent.com/barryvdh/bb6ffc5d11e0a75dba67/raw/a852a2ad3c478b503d0f5d2b97fae87195683ad3/.phpstorm.meta.php"
+alias ide_helper-file="wget https://gist.githubusercontent.com/barryvdh/5227822/raw/4be028a27c4ec782965bb8f2fdcb4c08c71a441d/_ide_helper.php"
+
+# php and laravel aliases
+alias art="php artisan"
+alias migrate="php artisan migrate"
+alias migrater="php artisan migrate:refresh"
+alias migratef="php artisan migrate:fresh"
+alias c-all="php artisan cache:clear && php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan event:clear && php artisan clear-compiled && php artisan optimize:clear"
+alias ca-all="php artisan cache:clear && php artisan config:cache && php artisan view:cache && php artisan route:cache && php artisan event:cache"
+alias tin="php artisan tinker"
+alias lr="php artisan route:list > routes.trash"
+alias test="php artisan test"
+alias testr="php artisan test --coverage-html reports/"
+alias testf="php artisan test --filter"
+alias unit="vendor/bin/phpunit"
+alias unitf="vendor/bin/phpunit --filter"
+alias insights="php artisan insights"
+alias analyse="./vendor/bin/phpstan analyse"
+
+# npm aliases
+alias nci="rm -rf node_modules/ && npm i"
+alias nf="npm audit fix"
+alias np="npm run production"
+alias nw="npm run watch"
+alias ns="npm run start"
+alias nb="npm run build"
+alias nu="npm up"
+alias nr="npm remove"
+
+# yarn aliases
+alias yci="rm -rf node_modules/ && yarn install"
+alias ycci="rm -rf node_modules/ yarn.lock && yarn install"
+alias ycib="rm -rf node_modules/ && yarn install && yarn build"
+alias yi="yarn install"
+alias ya="yarn add"
+alias ys="yarn start"
+alias yu="yarn upgrade"
+alias yr="yarn remove"
+
+# composer aliases
+alias c="composer"
+alias ci="composer install"
+alias cu="composer update"
+alias cr="composer require"
+alias crm="composer remove"
+alias cda="composer dump-autoload"
+alias crn="composer run-script"
+
+# docker aliases
+alias d="docker"
+alias dr="docker run"
+alias db="docker build"
+alias de="docker exec"
+alias da="docker attach"
+alias dc="docker-compose"
+alias dp="docker system prune"
+
+# kubectl aliases
+alias k="kubectl"

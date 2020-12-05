@@ -1,0 +1,122 @@
+setup_permissions() {
+    if [ "$#" -ne 3 ]; then
+        echo "${RED}Illegal number of parameters. PATH, WEB_SERVER_USER, and USER is required${DEFAULT}"
+    else
+        sudo -i
+
+        PATH="$1"
+        WEB_SERVER_USER="$2"
+        USER="$3"
+
+        sudo chown -R "$USER":"$WEB_SERVER_USER" "$PATH"
+        sudo usermod -a -G "$WEB_SERVER_USER" "$USER"
+        sudo chmod -R 775 "$PATH"
+    fi
+}
+
+rm_logs() {
+    rm -rf storage/logs/*.log
+}
+
+ssh-docker() {
+    docker exec -it "$@" bash
+}
+
+# Create a new directory and enter it
+mkd() {
+    mkdir -p "$@"
+    cd "$@"
+}
+
+function weather() {
+    city="$1"
+
+    if [ -z "$city" ]; then
+        city="riyadh"
+    fi
+
+    eval "curl http://wttr.in/${city}"
+}
+
+scheduler() {
+    while :; do
+        php artisan schedule:run
+        echo "Sleeping 60 seconds..."
+        sleep 60
+    done
+}
+
+silent() {
+    "$@" >&/dev/null
+}
+
+docker_prune_container() {
+    docker stop $(docker ps -aq) || :
+    docker container prune -f
+}
+
+docker_prune_image() {
+    docker image prune -fa
+}
+
+docker_prune_system() {
+    docker_prune_container
+    docker_prune_image
+    docker system prune -fa
+}
+
+docker_run() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker run --rm -it -p 8080:80 "$@"
+    fi
+}
+
+docker_build() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker build -t "$@" .
+    fi
+}
+
+docker_start() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker build -t "$1" . && docker run --rm -it -p 8080:80 "$1"
+    fi
+}
+
+npm_g() {
+    ls "$(npm root -g)"
+}
+
+port_usage() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
+    else
+        lsof -i :"$1"
+    fi
+}
+
+connect_pod() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
+    else
+        kubectl exec --stdin --tty "$1" -- /bin/bash
+    fi
+}
+
+brew_switch() {
+    if [ $# -lt 2 ]; then
+        echo "${RED}Illegal number of parameters. current version and target version is required${DEFAULT}"
+    else
+        brew unlink "$1" && brew link "$2"
+    fi
+}
+
+composer_1() {
+    docker run --rm --interactive --tty --volume "$PWD":/app composer:1 "$@"
+}
