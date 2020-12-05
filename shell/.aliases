@@ -44,6 +44,7 @@ alias nah="git reset --hard"
 alias scan-file="wget https://gist.githubusercontent.com/DevMoath/4df498915090b110d3a42a82d845a788/raw/c73488328800b116d21dfef88a97fedaaf28e55b/scanner_config.php"
 alias phpstorm-file="wget https://gist.githubusercontent.com/barryvdh/bb6ffc5d11e0a75dba67/raw/a852a2ad3c478b503d0f5d2b97fae87195683ad3/.phpstorm.meta.php"
 alias ide_helper-file="wget https://gist.githubusercontent.com/barryvdh/5227822/raw/4be028a27c4ec782965bb8f2fdcb4c08c71a441d/_ide_helper.php"
+alias php_cs-file="wget https://gist.githubusercontent.com/claudiodekker/e050a2cca2ba8d9f1bd3f1941babc3f2/raw/9bcc2f314223d60fb38dd6c79791bebfdf03dbb7/.php_cs"
 
 # php and laravel aliases
 alias art="php artisan"
