@@ -37,7 +37,6 @@ alias ga="git add ."
 alias gp="git push"
 alias gch="git checkout"
 alias gm="git commit -m"
-alias gco="git config user.name Moath && git config user.email moath.alhajrii@gmail.com"
 alias nah="git reset --hard"
 
 # gists aliases
