@@ -2,6 +2,7 @@
 ## Table of Contents
 - [Overview](#overview)
 - [What I Use](#what-i-use)
+- [How to Install](#how-to-install)
 
 ## Overview
 
@@ -11,5 +12,25 @@ My personal dotfiles. It contains tools I use, config, aliases, scripts, and fun
 
 * [Hyper](https://hyper.is/) as terminal
 * [Oh My ZSH](https://ohmyz.sh/) as Zsh configuration
+
+## How to Install
+
+Clone the repo: 
+
+```shell
+git clone https://github.com/DevMoath/dotfiles.git
+```
+
+CD into the repo: 
+
+```shell
+cd dotfiles
+```
+
+Finally, run `install.sh` script 
+
+```shell
+./install.sh
+```
 
 ![Screenshot](docs/screenshot.png)

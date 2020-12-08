@@ -1,23 +1,26 @@
 #!/bin/sh
 
+DEFAULT='\033[0m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+
 set -e
 
 install() {
-    echo '1. Copy configurations'
+    echo "${CYAN}1. Copy configurations${DEFAULT}"
     cp -rf ./shell/{.aliases,.exports,.functions,.gitignore_global,.hyper.js,.pure,.zshrc} "$HOME"
+    echo "${GREEN}DONE${DEFAULT}"
 
-    echo '2. Copy scripts'
+    echo "${CYAN}2. Copy scripts${DEFAULT}"
     cp -R ./.scripts "$HOME"
-
-    echo '------------------'
-    echo '-------DONE-------'
-    echo '------------------'
+    echo "${GREEN}DONE${DEFAULT}"
 }
 
-echo 'Copy terminal configurations'
-echo '------------------'
-echo 'This will reset your terminal configurations. Are you sure? (y/n)'
-read -p 'Answer: ' reply
+echo "${CYAN}COPY TERMINAL CONFIGURATIONS${DEFAULT}"
+echo "${CYAN}----------------------------${DEFAULT}"
+echo "${YELLOW}This will reset your terminal configurations. Are you sure? (y/n)${DEFAULT}"
+read -p "Answer: " reply
 
 if [[ $reply =~ ^[Yy]$ ]]; then
     install
