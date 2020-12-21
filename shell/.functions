@@ -119,7 +119,7 @@ brew_switch() {
 }
 
 composer_1() {
-    docker run --rm --interactive --tty --volume "$PWD":/app composer:1 "$@"
+    docker run --rm --interactive --tty --volume "$PWD":/app -e COMPOSER_MEMORY_LIMIT=-1 composer:1 "$@"
 }
 
 routes() {
