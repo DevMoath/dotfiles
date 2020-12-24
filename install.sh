@@ -19,9 +19,14 @@ install() {
 
 echo "${CYAN}COPY TERMINAL CONFIGURATIONS${DEFAULT}"
 echo "${CYAN}----------------------------${DEFAULT}"
-echo "${YELLOW}This will reset your terminal configurations. Are you sure? (y/n)${DEFAULT}"
-read -p "Answer: " reply
 
-if [[ $reply =~ ^[Yy]$ ]]; then
+if [[ $1 == "-Y" ]]; then
     install
+else
+    echo "${YELLOW}This will reset your terminal configurations. Are you sure? (y/n)${DEFAULT}"
+    read -p "Answer: " reply
+
+    if [[ $reply =~ ^[Yy]$ ]]; then
+        install
+    fi
 fi

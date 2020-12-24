@@ -21,13 +21,13 @@ Clone the repo:
 git clone https://github.com/DevMoath/dotfiles.git
 ```
 
-CD into the repo: 
+cd into the repo: 
 
 ```shell
 cd dotfiles
 ```
 
-Finally, run `install.sh` script 
+Finally, run `install.sh` script (it will ask you for confirmation, add `-Y` to skip it)
 
 ```shell
 ./install.sh
