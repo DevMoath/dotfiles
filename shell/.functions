@@ -154,4 +154,20 @@ clear_artisan() {
     php artisan clear-compiled || :
     php artisan optimize:clear || :
     php artisan debugbar:clear || :
+    php artisan permission:cache-reset || :
+}
+
+cache_artisan() {
+    php artisan cache:clear || :
+    php artisan config:cache || :
+    php artisan view:cache || :
+    php artisan route:cache || :
+    php artisan event:cache || :
+}
+
+ide_helper() {
+    php artisan ide-helper:eloquent || :
+    php artisan ide-helper:generate || :
+    php artisan ide-helper:meta || :
+    php artisan ide-helper:models || :
 }
