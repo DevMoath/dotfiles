@@ -59,6 +59,7 @@ alias testf="php artisan test --filter"
 alias phpunit="vendor/bin/phpunit"
 alias phpunitf="vendor/bin/phpunit --filter"
 alias pest="./vendor/bin/pest"
+alias pestf="./vendor/bin/pest --filter"
 alias insights="php artisan insights"
 alias analyse="./vendor/bin/phpstan analyse"
 
