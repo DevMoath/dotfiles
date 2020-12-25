@@ -171,3 +171,13 @@ ide_helper() {
     php artisan ide-helper:meta || :
     php artisan ide-helper:models || :
 }
+
+stop_services() {
+    brew services stop mysql
+    valet stop
+}
+
+start_services() {
+    brew services start mysql
+    valet start
+}
