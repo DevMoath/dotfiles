@@ -59,12 +59,12 @@ module.exports = {
 
         // if you're using a Linux setup which show native menus, set to false
         // default: `true` on Linux, `true` on Windows, ignored on macOS
-        showHamburgerMenu: '',
+        showHamburgerMenu: true,
 
         // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close
         // buttons additionally, set to `'left'` if you want them on the left, like in Ubuntu default: `true` (without
         // backticks and without quotes) on Windows and Linux, ignored on macOS
-        showWindowControls: '',
+        showWindowControls: true,
 
         // custom padding (CSS format, i.e.: `top right bottom left`)
         padding: '12px 14px',
@@ -113,7 +113,7 @@ module.exports = {
         env: {},
 
         // The number of rows to be persisted in terminal buffer for scrolling
-        scrollback: 20000,
+        scrollback: 200000,
 
         // set to `false` for no bell
         bell: 'SOUND',
@@ -152,13 +152,13 @@ module.exports = {
         },
 
         hypest: {
-            darkmode: true,
+            darkmode: false,
             vibrancy: false,
             borders: false,
             hideControls: true,
             // Default is 'blue'
             // Use one of 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan' or 'white'
-            accentColor: 'white'
+            accentColor: 'black'
             // Supported  colors are 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan' and 'white'
             // Custom colors must be specified as 6 character hexadecimals
             /*colors: {
