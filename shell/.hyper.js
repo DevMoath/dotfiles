@@ -2,6 +2,8 @@
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
+const darkmode = true;
+
 module.exports = {
     config: {
         // choose either `'stable'` for receiving highly polished,
@@ -152,13 +154,13 @@ module.exports = {
         },
 
         hypest: {
-            darkmode: false,
+            darkmode: darkmode,
             vibrancy: false,
             borders: false,
             hideControls: true,
             // Default is 'blue'
             // Use one of 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan' or 'white'
-            accentColor: 'black'
+            accentColor: darkmode ? 'white' : 'black'
             // Supported  colors are 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan' and 'white'
             // Custom colors must be specified as 6 character hexadecimals
             /*colors: {
