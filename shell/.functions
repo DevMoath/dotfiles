@@ -181,3 +181,7 @@ start_services() {
     brew services start mysql
     valet start
 }
+
+clear_valet_cache() {
+    rm ~/.config/valet/valet.sock
+}
