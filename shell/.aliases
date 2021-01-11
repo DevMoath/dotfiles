@@ -8,7 +8,7 @@ alias catsshconfig="cat $HOME/.ssh/config"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadcli="source $HOME/.zshrc"
 alias o="open ."
-alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Dashlane.app Docker.app PhpStorm.app Microsoft\ Teams.app"
+alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Dashlane.app Docker.app PhpStorm.app && cd"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # Show/hide hidden files in Finder
