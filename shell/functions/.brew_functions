@@ -1,0 +1,17 @@
+brew_switch() {
+    if [ $# -lt 2 ]; then
+        echo "${RED}Illegal number of parameters. current version and target version is required${DEFAULT}"
+    else
+        brew unlink "$1" && brew link "$2"
+    fi
+}
+
+brew_stop_services() {
+    brew services stop mysql
+    valet stop
+}
+
+brew_start_services() {
+    brew services start mysql
+    valet start
+}

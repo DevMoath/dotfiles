@@ -15,6 +15,10 @@ install() {
     echo "${CYAN}2. Copy scripts${DEFAULT}"
     cp -R ./.scripts "$HOME"
     echo "${GREEN}DONE${DEFAULT}"
+
+    echo "${CYAN}3. Copy functions${DEFAULT}"
+    cp -R ./shell/functions/{.brew_functions,.docker_functions,.git_functions,.laravel_functions} "$HOME"
+    echo "${GREEN}DONE${DEFAULT}"
 }
 
 echo "${CYAN}COPY TERMINAL CONFIGURATIONS${DEFAULT}"

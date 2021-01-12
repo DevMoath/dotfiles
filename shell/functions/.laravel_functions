@@ -1,0 +1,71 @@
+composer_1() {
+    docker run --rm --interactive --tty --volume "$PWD":/app -e COMPOSER_MEMORY_LIMIT=-1 ricc/composer-prestissimo "$@"
+}
+
+artisan_routes() {
+    if [ $# -eq 0 ]; then
+        php artisan route:list
+    else
+        php artisan route:list | grep "$1"
+    fi
+}
+
+artisan_clear() {
+    php artisan cache:clear || :
+    php artisan route:clear || :
+    php artisan config:clear || :
+    php artisan view:clear || :
+    php artisan event:clear || :
+    php artisan clear-compiled || :
+    php artisan optimize:clear || :
+    php artisan debugbar:clear || :
+    php artisan permission:cache-reset || :
+}
+
+artisan_cache() {
+    php artisan cache:clear || :
+    php artisan config:cache || :
+    php artisan view:cache || :
+    php artisan route:cache || :
+    php artisan event:cache || :
+}
+
+artisan_scheduler() {
+    while :; do
+        php artisan schedule:run
+        echo "Sleeping 60 seconds..."
+        sleep 60
+    done
+}
+
+artisan_ide_helper() {
+    php artisan ide-helper:eloquent || :
+    php artisan ide-helper:generate || :
+    php artisan ide-helper:meta || :
+    php artisan ide-helper:models -WR || :
+}
+
+artisan_rm_logs() {
+    rm -rf storage/logs/*
+}
+
+artisan_setup_permissions() {
+    if [ "$#" -ne 3 ]; then
+        echo "${RED}Illegal number of parameters. PATH, WEB_SERVER_USER, and USER is required${DEFAULT}"
+    else
+        sudo -i
+
+        PATH="$1"
+        WEB_SERVER_USER="$2"
+        USER="$3"
+
+        sudo chown -R "$USER":"$WEB_SERVER_USER" "$PATH"
+        sudo usermod -aG "$WEB_SERVER_USER" "$USER"
+        sudo usermod -aG "$USER" "$WEB_SERVER_USER"
+        sudo chmod -R ug+rwx "$PATH"
+    fi
+}
+
+clear_valet_cache() {
+    rm ~/.config/valet/valet.sock
+}

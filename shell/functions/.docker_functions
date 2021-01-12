@@ -1,0 +1,50 @@
+docker_ssh() {
+    docker exec -it "$@" bash
+}
+
+docker_prune_container() {
+    docker stop $(docker ps -aq) || :
+    docker container prune -f
+}
+
+docker_prune_image() {
+    docker image prune -fa
+}
+
+docker_prune_system() {
+    docker_prune_container
+    docker_prune_image
+    docker system prune -fa
+}
+
+docker_run() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker run --rm -it -p 8080:80 "$@"
+    fi
+}
+
+docker_build() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker build -t "$@" .
+    fi
+}
+
+docker_start() {
+    if [ "$#" -eq "0" ]; then
+        echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
+    else
+        docker build -t "$1" . && docker run --rm -it -p 8080:80 "$1"
+    fi
+}
+
+docker_compose_up() {
+    docker-compose up -d --build --remove-orphans
+}
+
+docker_compose_down() {
+    docker-compose down -v --remove-orphans
+}
