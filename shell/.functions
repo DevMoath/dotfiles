@@ -29,7 +29,7 @@ mkd() {
     cd "$@"
 }
 
-function weather() {
+weather() {
     city="$1"
 
     if [ -z "$city" ]; then
@@ -88,6 +88,14 @@ docker_start() {
     else
         docker build -t "$1" . && docker run --rm -it -p 8080:80 "$1"
     fi
+}
+
+docker_compose_up() {
+    docker-compose up -d --build --remove-orphans
+}
+
+docker_compose_down() {
+    docker-compose down -v --remove-orphans
 }
 
 npm_g() {
