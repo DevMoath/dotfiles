@@ -16,6 +16,8 @@ My personal dotfiles. It contains tools I use, config, aliases, scripts, and fun
 
 ## How to Install
 
+> Make sure you finished the setup for [What I Use](#what-i-use) section 
+
 Clone the repo: 
 
 ```shell
