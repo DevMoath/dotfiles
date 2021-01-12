@@ -12,6 +12,7 @@ My personal dotfiles. It contains tools I use, config, aliases, scripts, and fun
 
 * [Hyper](https://hyper.is/) as terminal
 * [Oh My ZSH](https://ohmyz.sh/) as Zsh configuration
+* [pure](https://github.com/sindresorhus/pure) as Zsh Theme
 
 ## How to Install
 
