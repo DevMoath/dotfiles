@@ -55,6 +55,10 @@ docker_compose_restart() {
 }
 
 docker_compose_run() {
+    docker-compose run --rm "$@"
+}
+
+docker_compose_run_many() {
     if (($# == 0)); then
         echo "${RED}Illegal number of parameters. container name and at least one command are required${DEFAULT}"
     else
