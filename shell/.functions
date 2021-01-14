@@ -8,7 +8,7 @@ npm_g() {
 }
 
 port_usage() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
     else
         lsof -i :"$1"
@@ -16,7 +16,7 @@ port_usage() {
 }
 
 connect_pod() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
     else
         kubectl exec --stdin --tty "$1" -- /bin/bash

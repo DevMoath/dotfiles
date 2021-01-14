@@ -1,5 +1,5 @@
 docker_ssh() {
-    docker exec -it "$@" bash
+    docker exec -it "$1" bash
 }
 
 docker_prune_container() {
@@ -18,7 +18,7 @@ docker_prune_system() {
 }
 
 docker_run() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
     else
         docker run --rm -it -p 8080:80 "$@"
@@ -26,7 +26,7 @@ docker_run() {
 }
 
 docker_build() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
     else
         docker build -t "$@" .
@@ -34,7 +34,7 @@ docker_build() {
 }
 
 docker_start() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. image name is required${DEFAULT}"
     else
         docker build -t "$1" . && docker run --rm -it -p 8080:80 "$1"
@@ -55,7 +55,7 @@ docker_compose_restart() {
 }
 
 docker_compose_run() {
-    if [ "$#" -eq "0" ]; then
+    if (($# == 0)); then
         echo "${RED}Illegal number of parameters. container name and at least one command are required${DEFAULT}"
     else
         container_name="$1"

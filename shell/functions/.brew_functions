@@ -1,5 +1,5 @@
 brew_switch() {
-    if [ $# -lt 2 ]; then
+    if (($# != 2)); then
         echo "${RED}Illegal number of parameters. current version and target version is required${DEFAULT}"
     else
         brew unlink "$1" && brew link "$2"

@@ -3,7 +3,7 @@ composer_1() {
 }
 
 artisan_routes() {
-    if [ $# -eq 0 ]; then
+    if (($# == 0)); then
         php artisan route:list
     else
         php artisan route:list | grep "$1"
@@ -50,7 +50,7 @@ artisan_rm_logs() {
 }
 
 artisan_setup_permissions() {
-    if [ "$#" -ne 3 ]; then
+    if (($# < 3)); then
         echo "${RED}Illegal number of parameters. PATH, WEB_SERVER_USER, and USER is required${DEFAULT}"
     else
         sudo -i
