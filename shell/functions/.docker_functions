@@ -48,3 +48,8 @@ docker_compose_up() {
 docker_compose_down() {
     docker-compose down -v --remove-orphans
 }
+
+docker_compose_restart() {
+    docker-compose down -v --remove-orphans
+    docker-compose up -d --build --remove-orphans
+}
