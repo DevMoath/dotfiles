@@ -42,16 +42,16 @@ docker_start() {
 }
 
 docker_compose_up() {
-    docker-compose up -d --build --remove-orphans
+    docker-compose up -d --build --remove-orphans "$@"
 }
 
 docker_compose_down() {
-    docker-compose down -v --remove-orphans
+    docker-compose down -v --remove-orphans "$@"
 }
 
 docker_compose_restart() {
-    docker-compose down -v --remove-orphans
-    docker-compose up -d --build --remove-orphans
+    docker-compose down -v --remove-orphans "$@"
+    docker-compose up -d --build --remove-orphans "$@"
 }
 
 docker_compose_run() {
