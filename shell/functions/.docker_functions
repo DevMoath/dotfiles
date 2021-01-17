@@ -50,7 +50,7 @@ docker_compose_down() {
 }
 
 docker_compose_restart() {
-    docker-compose down -v --remove-orphans "$@"
+    docker-compose down -v --remove-orphans
     docker-compose up -d --build --remove-orphans "$@"
 }
 
