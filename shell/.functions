@@ -3,22 +3,10 @@ mkd() {
     cd "$@" || :
 }
 
-npm_g() {
-    ls "$(npm root -g)"
-}
-
 port_usage() {
     if (($# == 0)); then
         echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
     else
         lsof -i :"$1"
-    fi
-}
-
-connect_pod() {
-    if (($# == 0)); then
-        echo "${RED}Illegal number of parameters. port number is required${DEFAULT}"
-    else
-        kubectl exec --stdin --tty "$1" -- /bin/bash
     fi
 }

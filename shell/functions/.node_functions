@@ -1,0 +1,7 @@
+npm_g() {
+    ls "$(npm root -g)"
+}
+
+npm_1() {
+    docker run --rm --interactive --tty --volume "$PWD":/app --workdir=/app node:8-alpine "$@"
+}
