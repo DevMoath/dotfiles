@@ -13,10 +13,6 @@ brew upgrade --cask
 brew cleanup
 message "brew Finished"
 
-message "npm Starting"
-npm update -g
-message "npm Finished"
-
 message "composer Starting"
 composer self-update --clean-backups
 composer global update
