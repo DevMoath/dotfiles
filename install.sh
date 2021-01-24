@@ -17,7 +17,7 @@ install() {
     echo "${GREEN}DONE${DEFAULT}"
 
     echo "${CYAN}3. Copy functions${DEFAULT}"
-    cp -R ./shell/functions/{.brew_functions,.docker_functions,.git_functions,.laravel_functions} "$HOME"
+    cp -R ./shell/functions/{.brew_functions,.docker_functions,.git_functions,.laravel_functions,.node_functions,.kubectl_functions} "$HOME"
     echo "${GREEN}DONE${DEFAULT}"
 }
 
