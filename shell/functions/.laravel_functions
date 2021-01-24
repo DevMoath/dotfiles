@@ -46,7 +46,7 @@ artisan_ide_helper() {
 }
 
 artisan_rm_logs() {
-    rm -rf storage/logs/*
+    rm -rf storage/logs/**
 }
 
 artisan_setup_permissions() {
