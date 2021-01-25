@@ -13,3 +13,11 @@ connect_database() {
         echo "psql -h $1 -p $2 -U $3 $4"
     fi
 }
+
+decode_secret() {
+    if (($# < 2)); then
+        echo "${RED}Illegal number of parameters. secret name, secret key is required${DEFAULT}"
+    else
+        kubectl get secrets "$1" -o json | jq ".data.$2" | sed -e 's/^"//' -e 's/"$//' | base64 --decode
+    fi
+}
