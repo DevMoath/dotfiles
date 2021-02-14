@@ -29,6 +29,9 @@ source "$ZSH/oh-my-zsh.sh"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Kubectl autocomplete
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
 # disable homebrew anonymous analytics
 export HOMEBREW_NO_ANALYTICS=1
 
