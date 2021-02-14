@@ -97,3 +97,4 @@ toutch ~/.bash_sessions_disable
 * [Tweets about shell script](https://twitter.com/i/events/1335052425846284288)
 * [Set Up a Mac for Development From Scratch](https://laracasts.com/series/setup-a-mac-for-development-from-scratch)
 * [Vim Mastery](https://laracasts.com/series/vim-mastery)
+* [Bash scripting cheatsheet](https://devhints.io/bash)
