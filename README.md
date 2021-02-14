@@ -1,4 +1,4 @@
-# Moath dotfiles
+# Moath's dotfiles
 
 ## Table of Contents
 
@@ -98,3 +98,4 @@ toutch ~/.bash_sessions_disable
 * [Set Up a Mac for Development From Scratch](https://laracasts.com/series/setup-a-mac-for-development-from-scratch)
 * [Vim Mastery](https://laracasts.com/series/vim-mastery)
 * [Bash scripting cheatsheet](https://devhints.io/bash)
+* [Your unofficial guide to doing dotfiles on GitHub.](https://github.com/dotfiles/dotfiles.github.com)
