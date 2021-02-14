@@ -1,39 +1,91 @@
-# My Personal dotfiles [![Twitter](https://img.shields.io/twitter/url?style=social&url=https://github.com/DevMoath/dotfiles)](https://twitter.com/intent/tweet?text=My%20Personal%20dotfiles%20By%20@DevMoath%20https://github.com/DevMoath/dotfiles)
+# Moath dotfiles
+
 ## Table of Contents
-- [Overview](#overview)
-- [What I Use](#what-i-use)
-- [How to Install](#how-to-install)
 
-## Overview
+- [Steps to bootstrap a new Mac](#steps-to-bootstrap-a-new-mac)
+- [Optional](#optional)
+- [Example](#example)
+- [Useful resources for dotfiles](#useful-resources-for-dotfiles)
 
-My personal dotfiles. It contains tools I use, config, aliases, scripts, and functions.
+## Steps to bootstrap a new Mac
 
-## What I use
-
-* [Hyper](https://hyper.is/) as terminal
-* [Oh My ZSH](https://ohmyz.sh/) as Zsh configuration
-* [pure](https://github.com/sindresorhus/pure) as Zsh Theme
-
-## How to Install
-
-> Make sure you finished the setup for [What I Use](#what-i-use) section 
-
-Clone the repo: 
+1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
 ```shell
-git clone https://github.com/DevMoath/dotfiles.git
+xcode-select --install
 ```
 
-cd into the repo: 
+2. Clone repo into new hidden directory.
 
 ```shell
-cd dotfiles
+git clone https://github.com/DevMoath/dotfiles.git ~/.dotfiles
 ```
 
-Finally, run `install.sh` script (it will ask you for confirmation, add `-Y` to skip it)
+3. Create symlinks in the Home directory to the real files in the repo.
 
 ```shell
-./install.sh
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/composer.json ~/.composer/composer.json
 ```
 
-![Screenshot](docs/screenshot.png)
+4. Install Homebrew, followed by the software listed in the Brewfile.
+
+```shell
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Then pass in the Brewfile location...
+brew bundle --file ~/.dotfiles/Brewfile
+```
+
+5. Install Oh My ZSH
+
+```shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+6. Install pure-prompt
+
+```shell
+npm install --global pure-prompt
+```
+
+7. Install vimrc
+
+```shell
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+
+## Optional
+
+* to disable "Last login" message:
+
+```shell
+toutch ~/.hushlogin 
+```
+
+* to disable restore terminal windows:
+
+```shell
+toutch ~/.bash_sessions_disable
+```
+
+## Example
+
+<p align="center"><b>Dark theme</b></p>
+
+![Dark Screenshot](images/screenshot-dark.png)
+
+<p align="center"><b>Light theme</b></p>
+
+![Light Screenshot](images/screenshot-light.png)
+
+## Useful resources for dotfiles
+
+* [Dotfiles from Start to Finish-ish](https://www.udemy.com/course/dotfiles-from-start-to-finish-ish/)
+* [~/.dotfiles in 100 Seconds](https://youtu.be/r_MpUP6aKiQ)
+* [Vim in 100 Seconds](https://youtu.be/-txKSRn0qeA)
+* [Tweets about shell script](https://twitter.com/i/events/1335052425846284288)

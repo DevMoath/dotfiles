@@ -1,5 +1,4 @@
-# Compiled source #
-###################
+# Compiled source
 *.com
 *.class
 *.dll
@@ -7,8 +6,7 @@
 *.o
 *.so
 
-# Packages #
-############
+# Packages
 *.7z
 *.dmg
 *.gz
@@ -18,22 +16,21 @@
 *.tar
 *.zip
 
-# PHP and laravel #
-######################
+# PHP and laravel
 .tap-*
 _ide_helper.php
 .phpstorm.meta.php
 _ide_helper_models.php
 *.cache
+.phpunit-watcher-cache.php
+.phpunit.result.cache
 
-# Logs and databases #
-######################
+# Logs and databases
 *.log
 *.sql
 *.sqlite
 
-# OS generated files #
-######################
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -52,5 +49,3 @@ Thumbs.db
 node_modules
 npm-debug.log
 yarn-error.log
-.phpunit-watcher-cache.php
-.phpunit.result.cache
