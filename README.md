@@ -59,6 +59,12 @@ ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/composer.json ~/.composer/composer.json
 ```
 
+8. Install zsh-syntax-highlighting
+
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
 ## Optional
 
 * to disable "Last login" message:
