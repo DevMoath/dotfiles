@@ -34,6 +34,8 @@ brew "git-lfs"
 brew "gnupg@1.4"
 # Kubernetes package manager
 brew "helm"
+# Add GitHub support to git on the command-line
+brew "hub"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
@@ -42,6 +44,8 @@ brew "jq"
 brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Mac App Store command-line interface
+brew "mas"
 # Replacement for the old crypt package and crypt(1) command
 brew "mcrypt"
 # Run a Kubernetes cluster locally
@@ -79,4 +83,15 @@ brew "youtube-dl"
 cask "font-inconsolata"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Fork of Nylas Mail
+cask "mailspring"
 cask "wkhtmltopdf"
+mas "iMovie", id: 408981434
+mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Xcode", id: 497799835
