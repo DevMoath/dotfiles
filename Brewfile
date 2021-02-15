@@ -1,4 +1,5 @@
 tap "codeclimate/formulae"
+tap "eth-p/software"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -80,6 +81,8 @@ brew "wget"
 brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Bash scripts that integrate bat with various command-line tools
+brew "eth-p/software/bat-extras"
 cask "font-inconsolata"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
