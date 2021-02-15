@@ -32,6 +32,10 @@ source "$ZSH/oh-my-zsh.sh"
 # Kubectl autocomplete
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
+# customize homebrew cask options
+# "--no-quarantine": disable Apple’s quarantining prompt
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
 # disable homebrew anonymous analytics
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -281,5 +285,5 @@ decode_secret() {
 
 # to toggle system theme
 toggle_theme() {
-     osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'
+    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'
 }
