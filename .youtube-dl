@@ -1,0 +1,2 @@
+-f best
+-o "$HOME/Downloads/%(title)s.%(ext)s"

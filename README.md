@@ -57,6 +57,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/composer.json ~/.composer/composer.json
+ln -s ~/.dotfiles/.youtube-dl ~/.config/youtube-dl/config
 ```
 
 8. Install zsh-syntax-highlighting
