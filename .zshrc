@@ -283,7 +283,14 @@ decode_secret() {
     kubectl get secrets "$1" -o json | jq ".data.$2" | sed -e 's/^"//' -e 's/"$//' | base64 --decode
 }
 
-# to toggle system theme
-toggle_theme() {
-    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'
+# toggle system theme to dark theme
+dark_theme() {
+    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+    iterm2_profile Dark
+}
+
+# toggle system theme to light theme
+light_theme() {
+    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to false'
+    iterm2_profile Light
 }
