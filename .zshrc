@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
