@@ -52,7 +52,7 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
 
 # Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto"
+export GREP_OPTIONS="--color=auto -in"
 
 # Load pure-prompt its "Pretty, minimal and fast ZSH prompt",
 # see how to install it here https://github.com/sindresorhus/pure.
