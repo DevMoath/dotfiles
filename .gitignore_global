@@ -17,13 +17,12 @@
 *.zip
 
 # PHP and laravel
-.tap-*
-_ide_helper.php
+.env.*
+.env
+_ide_helper*
 .phpstorm.meta.php
-_ide_helper_models.php
 *.cache
-.phpunit-watcher-cache.php
-.phpunit.result.cache
+*cache.php
 
 # Logs and databases
 *.log
