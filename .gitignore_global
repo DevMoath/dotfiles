@@ -40,6 +40,7 @@ Thumbs.db
 .idea/
 .vagrant/
 .trash*
+Brewfile.lock.json
 
 # Vim swap files
 .*.sw?
