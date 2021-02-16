@@ -83,11 +83,35 @@ brew "yarn"
 brew "youtube-dl"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
+# Application launcher and productivity software
+cask "alfred"
+# Application uninstaller
+cask "appcleaner"
+# Two-factor authentication software
+cask "authy"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Web browser
+cask "firefox"
 cask "font-inconsolata"
+# Web browser
+cask "google-chrome"
+cask "intellij-idea"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Track and update to the latest versions of installed software
+cask "macupdater"
 # Fork of Nylas Mail
 cask "mailspring"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+cask "phpstorm"
+# Collaboration platform for API development
+cask "postman"
 cask "wkhtmltopdf"
 mas "iMovie", id: 408981434
 mas "Magnet", id: 441258766
