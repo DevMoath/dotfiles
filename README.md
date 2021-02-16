@@ -66,6 +66,14 @@ ln -s ~/.dotfiles/.youtube-dl ~/.config/youtube-dl/config
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 
+9. Install composer and npm global packages
+
+```shell
+composer global i
+
+xargs npm install --global < ~/.dotfiles/npmfile
+```
+
 ## Optional
 
 * to disable "Last login" message:
