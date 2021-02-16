@@ -88,6 +88,9 @@ alias watch='watch '
 # also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
+# This lists your path items on separate lines in ZSH.
+alias trail='<<<${(F)path}'
+
 # Restart touch bar
 alias touchbar="killall ControlStrip"
 
