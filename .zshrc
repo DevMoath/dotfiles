@@ -1,7 +1,9 @@
-export PATH="$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin/bin:$PATH"
+BREW_PREFIX=$(brew --prefix)
+
+export PATH=${HOME}/bin:${BREW_PREFIX}/bin:${HOME}/.composer/vendor/bin:${BREW_PREFIX}/sbin:${BREW_PREFIX}/bin/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
