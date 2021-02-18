@@ -75,7 +75,6 @@ prompt pure
 
 # Add custom aliases
 alias sudo="sudo "
-alias ali="vi $HOME/.aliases"
 alias cl="clear"
 alias sshconfig="vi $HOME/.ssh/config"
 alias catsshconfig="cat $HOME/.ssh/config"
@@ -111,7 +110,7 @@ alias gpua="git pull --all"
 alias ga="git add ."
 alias gp="git push"
 alias gch="git checkout"
-alias gm="git commit -m"
+alias gm="git commit -am"
 alias nah="git reset --hard"
 
 # php and laravel aliases
