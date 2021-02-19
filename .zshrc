@@ -44,6 +44,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # Syntack highlighting for man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# Customize bat options
+export BAT_PAGER="less -RF"
+
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
