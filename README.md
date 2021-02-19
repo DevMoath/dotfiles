@@ -81,13 +81,13 @@ xargs npm install --global < ~/.dotfiles/npmfile
 * to disable "Last login" message:
 
 ```shell
-toutch ~/.hushlogin 
+touch ~/.hushlogin 
 ```
 
 * to disable restore terminal windows:
 
 ```shell
-toutch ~/.bash_sessions_disable
+touch ~/.bash_sessions_disable
 ```
 
 ## Example
