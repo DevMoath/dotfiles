@@ -48,6 +48,8 @@ npm install --global pure-prompt
 ```shell
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 
+ln -s ~/.dotfiles/.vimrc ~/.vim_runtime/my_configs.vim
+
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
