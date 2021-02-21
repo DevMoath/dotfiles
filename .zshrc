@@ -207,62 +207,57 @@ git_global_whoami() {
     git config --global user.email
 }
 
-# ssh to a container
-docker_ssh() {
-    docker exec -it "$1" bash
-}
-
 # stop all docker containers and prune them
-docker_prune_container() {
+d_prune_container() {
     docker stop $(docker ps -aq) || :
     docker container prune -f
 }
 
 # prune all docker images
-docker_prune_image() {
+d_prune_image() {
     docker image prune -fa
 }
 
 # prune docker system (containers, images, networks, volumes, ...etc)
-docker_prune_system() {
+d_prune_system() {
     docker_prune_container
     docker_prune_image
     docker system prune -fa
 }
 
 # run a docker container with interactive mode and delete it once you exist
-docker_run() {
+d_run() {
     docker run --rm -it "$@"
 }
 
 # build docker image and run it with interactive mode and port 8080 and delete it once you exist
-docker_start() {
+d_start() {
     docker build -t "$1" . && docker run --rm -it -p 8080:80 "$1"
 }
 
 # start docker-compose in background and build images and remove containers for services not defined in the Compose file
-docker_compose_up() {
+dc_up() {
     docker-compose up -d --build --remove-orphans "$@"
 }
 
 # stop docker-compose and remove containers and networks
-docker_compose_down() {
+dc_down() {
     docker-compose down -v --remove-orphans "$@"
 }
 
 # restart docker-compose
-docker_compose_restart() {
+dc_restart() {
     docker-compose down -v --remove-orphans
     docker-compose up -d --build --remove-orphans "$@"
 }
 
 # run specific service in docker-compose and delete it once exits
-docker_compose_run() {
+dc_run() {
     docker-compose run --rm "$@"
 }
 
 # run many commands for specific service in docker-compose and delete it once exits
-docker_compose_run_many() {
+dc_run_many() {
     container_name="$1"
     shift
 
