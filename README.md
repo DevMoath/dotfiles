@@ -58,6 +58,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```shell
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/composer.json ~/.composer/composer.json
 ln -s ~/.dotfiles/.youtube-dl ~/.config/youtube-dl/config
 ```

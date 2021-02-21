@@ -1,0 +1,12 @@
+[user]
+	name = Moath
+	email = 28797003+DevMoath@users.noreply.github.com
+	username = DevMoath
+[core]
+    editor = vim
+	pager = less -+X
+	excludesfile = ~/.gitignore_global
+[web]
+	browser = google-chrome
+[color]
+	ui = auto
