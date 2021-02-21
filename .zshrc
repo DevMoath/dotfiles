@@ -85,9 +85,11 @@ alias catsshconfig="cat $HOME/.ssh/config"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadcli="source $HOME/.zshrc"
 alias o="open ."
-alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app && cd -"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias watch='watch '
+
+# Apps I use for my work
+alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app Microsoft\ Teams.app && cd -"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # also, clear Apple’s System Logs to improve shell startup speed
