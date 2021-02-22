@@ -295,11 +295,11 @@ decode_secret() {
 # toggle system theme to dark theme
 dark_theme() {
     osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
-    iterm2_profile Dark
+    iterm2_profile dark
 }
 
 # toggle system theme to light theme
 light_theme() {
     osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to false'
-    iterm2_profile Light
+    iterm2_profile light
 }
