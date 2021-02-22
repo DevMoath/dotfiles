@@ -117,7 +117,6 @@ alias ga="git add ."
 alias gp="git push"
 alias gch="git checkout"
 alias gm="git commit -am"
-alias nah="git reset --hard"
 
 # php and laravel aliases
 alias art="php artisan"
@@ -183,6 +182,11 @@ mkd() {
 # switch service version via Homebrew
 brew_switch() {
     brew unlink "$1" && brew link "$2"
+}
+
+nah() {
+    git reset --hard
+    rm -rf $(gs -s)
 }
 
 # pass your name\username and email to config your local user git
