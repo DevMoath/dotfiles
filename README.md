@@ -48,8 +48,6 @@ npm install --global pure-prompt
 ```shell
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 
-ln -s ~/.dotfiles/.vimrc ~/.vim_runtime/my_configs.vim
-
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
@@ -57,6 +55,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 ```shell
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.vimrc ~/.vim_runtime/my_configs.vim
 ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/composer.json ~/.composer/composer.json
