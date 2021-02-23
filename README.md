@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Steps to bootstrap a new Mac](#steps-to-bootstrap-a-new-mac)
-- [Optional](#optional)
 - [Example](#example)
 - [Useful resources for dotfiles](#useful-resources-for-dotfiles)
 
@@ -24,10 +23,8 @@ git clone https://github.com/DevMoath/dotfiles.git ~/.dotfiles
 3. Install Homebrew, followed by the software listed in the Brewfile.
 
 ```shell
-# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Then pass in the Brewfile location...
 brew bundle --file ~/.dotfiles/Brewfile
 ```
 
@@ -76,15 +73,13 @@ composer global i
 xargs npm install --global < ~/.dotfiles/npmfile
 ```
 
-## Optional
-
-* to disable "Last login" message:
+10. Disable "Last login" message:
 
 ```shell
 touch ~/.hushlogin 
 ```
 
-* to disable restore terminal windows:
+11. Disable restore terminal windows:
 
 ```shell
 touch ~/.bash_sessions_disable
