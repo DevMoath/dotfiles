@@ -1,2 +1,3 @@
--f best
--o "$HOME/Downloads/%(title)s.%(ext)s"
+--format best
+--output "$HOME/Downloads/%(title)s.%(ext)s"
+--audio-format mp3
