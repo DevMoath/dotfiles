@@ -265,15 +265,9 @@ dc_run() {
     docker-compose run --rm "$@"
 }
 
-# run many commands for specific service in docker-compose and delete it once exits
-dc_run_many() {
-    container_name="$1"
-    shift
-
-    while [ "$1" ]; do
-        docker-compose run --rm "$container_name" "$1"
-        shift
-    done
+# execute command docker-compose service
+dc_exec() {
+    docker-compose exec "$@"
 }
 
 # run artisan schedule every 60 min, instead of using corn job
