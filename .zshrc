@@ -61,7 +61,7 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
 
 # Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto -in"
+export GREP_OPTIONS="--color=auto -in -A 5 -B 5"
 
 # Load pure-prompt its "Pretty, minimal and fast ZSH prompt",
 # see how to install it here https://github.com/sindresorhus/pure.
@@ -92,7 +92,7 @@ alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias watch='watch '
 
 # Apps I use for my work
-alias work="cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app Microsoft\ Teams.app && cd -"
+alias work="light_theme && cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app Microsoft\ Teams.app && cd -"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # also, clear Apple’s System Logs to improve shell startup speed
