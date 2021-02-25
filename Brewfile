@@ -52,7 +52,7 @@ brew "mcrypt"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Platform built on V8 to build network applications
@@ -60,7 +60,7 @@ brew "node"
 # General-purpose scripting language
 brew "php", link: false
 # General-purpose scripting language
-brew "php@7.4", restart_service: true, link: true
+brew "php@7.4", link: true
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Powerful, clean, object-oriented scripting language
@@ -87,6 +87,8 @@ brew "eth-p/software/bat-extras"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Text editor
+cask "atom"
 # Two-factor authentication software
 cask "authy"
 # Voice and text chat software
