@@ -229,8 +229,8 @@ d_prune_image() {
 
 # prune docker system (containers, images, networks, volumes, ...etc)
 d_prune_system() {
-    docker_prune_container
-    docker_prune_image
+    d_prune_container
+    d_prune_image
     docker system prune -fa
 }
 
