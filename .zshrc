@@ -176,12 +176,6 @@ alias k="kubectl"
 
 # Add custom functions
 
-# make dir and cd into it
-mkd() {
-    mkdir -p "$@"
-    cd "$_"
-}
-
 # switch service version via Homebrew
 brew_switch() {
     brew unlink "$1" && brew link "$2"
