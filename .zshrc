@@ -1,10 +1,23 @@
-if command -v brew &> /dev/null; then
+# check if brew installed in your system or not
+if command -v brew &>/dev/null; then
     BREW_PREFIX=$(brew --prefix)
-else
-    BREW_PREFIX="/usr/local"
+
+    export PATH=${BREW_PREFIX}/sbin:$PATH
 fi
 
-export PATH=${HOME}/bin:${BREW_PREFIX}/bin:${HOME}/.composer/vendor/bin:${BREW_PREFIX}/sbin:${BREW_PREFIX}/bin/bin:$PATH
+# check if composer installed in your system or not
+if command -v composer &>/dev/null; then
+    COMPOSER_PREFIX=$(composer global config bin-dir --absolute --quiet)
+
+    export PATH=${COMPOSER_PREFIX}:$PATH
+fi
+
+# check if npm installed in your system or not
+if command -v npm &>/dev/null; then
+    NPM_PREFIX=$(npm -g prefix)
+
+    export PATH=${NPM_PREFIX}:${NPM_PREFIX}/bin:$PATH
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
@@ -83,10 +96,10 @@ prompt pure
 # Add custom aliases
 alias sudo="sudo "
 alias cl="clear"
-alias sshconfig="vi $HOME/.ssh/config"
-alias catsshconfig="cat $HOME/.ssh/config"
-alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reloadcli="source $HOME/.zshrc"
+alias sshconfig="vi ${HOME}/.ssh/config"
+alias catsshconfig="cat ${HOME}/.ssh/config"
+alias copyssh="pbcopy < ${HOME}/.ssh/id_rsa.pub"
+alias reloadcli="source ${HOME}/.zshrc"
 alias o="open ."
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias watch='watch '
