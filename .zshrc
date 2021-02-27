@@ -134,6 +134,7 @@ alias ll='ls -hAlF'
 
 # git aliases
 alias gc="git clone"
+alias gl="git log --oneline --decorate --color"
 alias gr="git remote get-url origin"
 alias gs="git status"
 alias gpu="git pull"
