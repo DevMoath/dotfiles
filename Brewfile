@@ -95,8 +95,6 @@ cask "authy"
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Web browser
-cask "firefox"
 cask "font-inconsolata"
 cask "intellij-idea"
 # Terminal emulator as alternative to Apple's Terminal app
