@@ -117,10 +117,6 @@ alias code="cd ${HOME}/code"
 # Apps I use for my work
 alias work="light_theme && cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app Microsoft\ Teams.app && cd -"
 
-# Empty the Trash on all mounted volumes and the main HDD
-# also, clear Apple’s System Logs to improve shell startup speed
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-
 # This lists your path items on separate lines in ZSH.
 alias trail='<<<${(F)path}'
 
