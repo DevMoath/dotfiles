@@ -105,8 +105,6 @@ cask "iterm2"
 cask "jetbrains-toolbox"
 # Track and update to the latest versions of installed software
 cask "macupdater"
-# Fork of Nylas Mail
-cask "mailspring"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 cask "phpstorm"
