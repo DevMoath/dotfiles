@@ -18,7 +18,7 @@ brew "composer"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Lightweight DNS forwarder and DHCP server
-brew "dnsmasq"
+brew "dnsmasq", restart_service: true
 # Standard SGML representation system for technical documents
 brew "docbook"
 # GNU multiple precision arithmetic library
@@ -52,15 +52,15 @@ brew "mcrypt"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
+brew "nginx", restart_service: true
 # Platform built on V8 to build network applications
 brew "node"
 # General-purpose scripting language
 brew "php", link: false
 # General-purpose scripting language
-brew "php@7.4", link: true
+brew "php@7.4", restart_service: true, link: true
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Powerful, clean, object-oriented scripting language
@@ -98,8 +98,6 @@ cask "docker"
 # Web browser
 cask "firefox"
 cask "font-inconsolata"
-# Web browser
-cask "google-chrome"
 cask "intellij-idea"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
@@ -117,10 +115,6 @@ cask "postman"
 cask "wkhtmltopdf"
 mas "iMovie", id: 408981434
 mas "Magnet", id: 441258766
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
 mas "Xcode", id: 497799835
