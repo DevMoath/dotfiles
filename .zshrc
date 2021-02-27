@@ -58,7 +58,7 @@ export EDITOR='vim'
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # And include the parameter for ZSH
-export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
+export HISTORY_IGNORE="(ls|cd|cd -|cd ..|pwd|exit|sudo reboot|history|date|* --help)"
 
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto -in -A 5 -B 5"
