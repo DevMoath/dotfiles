@@ -79,6 +79,10 @@ export HISTORY_IGNORE="(ls|cd|cd -|cd ..|pwd|exit|sudo reboot|history|date|* --h
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto -in -A 5 -B 5"
 
+# You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Load pure-prompt its "Pretty, minimal and fast ZSH prompt",
 # see how to install it here https://github.com/sindresorhus/pure.
 # Initialize the prompt system (if not so already):
