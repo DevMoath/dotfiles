@@ -1,3 +1,6 @@
+# Path to your dotfiles.
+export DOTFILES=$HOME/.dotfiles
+
 # check if brew installed in your system or not
 if command -v brew &>/dev/null; then
     BREW_PREFIX=$(brew --prefix)
