@@ -100,15 +100,18 @@ zstyle ':prompt:pure:prompt:continuation' color blue
 prompt pure
 
 # Add custom aliases
-alias sudo="sudo "
-alias cl="clear"
+
+# ssh aliases
 alias sshconfig="vi ${HOME}/.ssh/config"
 alias catsshconfig="cat ${HOME}/.ssh/config"
 alias copyssh="pbcopy < ${HOME}/.ssh/id_rsa.pub"
-alias reloadcli="source ${HOME}/.zshrc"
+
+# open current dir in finder.
 alias o="open ."
+
+alias cl="clear"
+alias reloadcli="source ${HOME}/.zshrc"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-alias watch='watch '
 
 # Directories
 alias dotfiles="cd ${DOTFILES}"
@@ -140,7 +143,7 @@ alias gp="git push"
 alias gch="git checkout"
 alias gm="git commit -am"
 
-# php and laravel aliases
+# Laravel aliases
 alias art="php artisan"
 alias migrate="php artisan migrate"
 alias migrater="php artisan migrate:refresh"
