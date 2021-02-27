@@ -86,8 +86,7 @@ export LANG=en_US.UTF-8
 # Load pure-prompt its "Pretty, minimal and fast ZSH prompt",
 # see how to install it here https://github.com/sindresorhus/pure.
 # Initialize the prompt system (if not so already):
-autoload -U promptinit
-promptinit
+autoload -U promptinit && promptinit
 
 # Turn on git stash status
 zstyle :prompt:pure:git:stash show yes
