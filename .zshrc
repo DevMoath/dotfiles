@@ -22,6 +22,13 @@ if command -v npm &>/dev/null; then
     export PATH=${NPM_PREFIX}:${NPM_PREFIX}/bin:$PATH
 fi
 
+# check if kubectl installed in your system or not
+if command -v kubectl &>/dev/null; then
+    KREW_PREFIX=${KREW_ROOT:-$HOME/.krew}/bin
+
+    export PATH=${KREW_PREFIX}:$PATH
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
 
