@@ -97,7 +97,7 @@ touch ~/.bash_sessions_disable
 
 ## Useful resources for dotfiles
 
-* [Dotfiles from Start to Finish-ish](https://www.udemy.com/course/dotfiles-from-start-to-finish-ish/)
+* [Dotfiles from Start to Finish-ish](http://dotfiles.eieio.xyz/)
 * [~/.dotfiles in 100 Seconds](https://youtu.be/r_MpUP6aKiQ)
 * [Vim in 100 Seconds](https://youtu.be/-txKSRn0qeA)
 * [Tweets about shell script](https://twitter.com/i/events/1335052425846284288)
