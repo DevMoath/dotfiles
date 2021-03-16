@@ -91,6 +91,8 @@ cask "appcleaner"
 cask "atom"
 # Two-factor authentication software
 cask "authy"
+# C and C++ IDE
+cask "clion"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
@@ -119,5 +121,4 @@ mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "Xcode", id: 497799835
