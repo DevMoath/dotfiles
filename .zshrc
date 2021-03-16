@@ -125,7 +125,7 @@ alias dotfiles="cd ${DOTFILES}"
 alias code="cd ${HOME}/code"
 
 # Apps I use for my work
-alias work="light_theme && cd /Applications && open Slack.app Spark.app BIG-IP\ Edge\ Client.app Docker.app PhpStorm.app Microsoft\ Teams.app && cd -"
+alias work="light_theme && cd /Applications && open Slack.app 'BIG-IP Edge Client.app' Docker.app PhpStorm.app 'Microsoft Teams.app' 'Microsoft Outlook.app' && cd -"
 
 # This lists your path items on separate lines in ZSH.
 alias trail='<<<${(F)path}'
